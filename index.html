@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="player-container">
+    <h2 id="title">Song Title</h2>
+    <p id="artist">Artist • Album</p>
+
+    <audio id="audio" src="song1.mp3"></audio>
+
+    <div class="progress-container">
+      <span id="current">0:00</span>
+      <input type="range" id="progress" value="0" />
+      <span id="duration">0:00</span>
+    </div>
+
+    <div class="controls">
+      <button onclick="toggleShuffle()" id="shuffleBtn">
+        <img src="icons/shuffle-solid.svg" alt="Shuffle" />
+      </button>
+      <button onclick="prevSong()">
+        <img src="icons/backward-step-solid.svg" alt="Previous" />
+      </button>
+      <button onclick="togglePlay()" id="playPauseBtn">
+        <img src="icons/circle-play-solid.svg" alt="Play" id="playPauseIcon" />
+      </button>
+      <button onclick="nextSong()">
+        <img src="icons/forward-step-solid.svg" alt="Next" />
+      </button>
+      <button onclick="toggleRepeat()" id="repeatBtn">
+        <img src="icons/repeat-solid.svg" alt="Repeat" />
+      </button>
+    </div>
+  </div>
+</body>
+</html>
